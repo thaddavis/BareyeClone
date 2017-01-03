@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009801E1B878D007E0627 /* AppDelegate.swift */; };
-		89D009831E1B878D007E0627 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009821E1B878D007E0627 /* FirstViewController.swift */; };
-		89D009851E1B878D007E0627 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009841E1B878D007E0627 /* SecondViewController.swift */; };
+		89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009821E1B878D007E0627 /* PeopleVC.swift */; };
+		89D009851E1B878D007E0627 /* BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009841E1B878D007E0627 /* BarsVC.swift */; };
 		89D009881E1B878D007E0627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D009861E1B878D007E0627 /* Main.storyboard */; };
 		89D0098A1E1B878E007E0627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D009891E1B878E007E0627 /* Assets.xcassets */; };
 		89D0098D1E1B878E007E0627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D0098B1E1B878E007E0627 /* LaunchScreen.storyboard */; };
 		89D009981E1B878E007E0627 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009971E1B878E007E0627 /* TestTests.swift */; };
 		89D009A31E1B878E007E0627 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009A21E1B878E007E0627 /* TestUITests.swift */; };
+		89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009B51E1C1C3D007E0627 /* BuyDrinksVC.swift */; };
+		89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */; };
+		89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009BA1E1C1CDB007E0627 /* ChatVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +40,8 @@
 /* Begin PBXFileReference section */
 		89D0097D1E1B878D007E0627 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D009801E1B878D007E0627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		89D009821E1B878D007E0627 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		89D009841E1B878D007E0627 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		89D009821E1B878D007E0627 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
+		89D009841E1B878D007E0627 /* BarsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarsVC.swift; sourceTree = "<group>"; };
 		89D009871E1B878D007E0627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89D009891E1B878E007E0627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D0098C1E1B878E007E0627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		89D0099E1E1B878E007E0627 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D009A21E1B878E007E0627 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		89D009A41E1B878E007E0627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D009B51E1C1C3D007E0627 /* BuyDrinksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinksVC.swift; sourceTree = "<group>"; };
+		89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrinksVC.swift; sourceTree = "<group>"; };
+		89D009BA1E1C1CDB007E0627 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		89D0097F1E1B878D007E0627 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				89D009B41E1C1AEF007E0627 /* Services */,
+				89D009B31E1C1AE8007E0627 /* Util */,
+				89D009B21E1C1AE2007E0627 /* Controller */,
+				89D009B11E1C1ADD007E0627 /* View */,
+				89D009B01E1C1AD7007E0627 /* Model */,
 				89D009801E1B878D007E0627 /* AppDelegate.swift */,
-				89D009821E1B878D007E0627 /* FirstViewController.swift */,
-				89D009841E1B878D007E0627 /* SecondViewController.swift */,
 				89D009861E1B878D007E0627 /* Main.storyboard */,
 				89D009891E1B878E007E0627 /* Assets.xcassets */,
 				89D0098B1E1B878E007E0627 /* LaunchScreen.storyboard */,
@@ -126,6 +135,46 @@
 				89D009A41E1B878E007E0627 /* Info.plist */,
 			);
 			path = TestUITests;
+			sourceTree = "<group>";
+		};
+		89D009B01E1C1AD7007E0627 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		89D009B11E1C1ADD007E0627 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		89D009B21E1C1AE2007E0627 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89D009821E1B878D007E0627 /* PeopleVC.swift */,
+				89D009841E1B878D007E0627 /* BarsVC.swift */,
+				89D009B51E1C1C3D007E0627 /* BuyDrinksVC.swift */,
+				89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */,
+				89D009BA1E1C1CDB007E0627 /* ChatVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		89D009B31E1C1AE8007E0627 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		89D009B41E1C1AEF007E0627 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +245,7 @@
 				TargetAttributes = {
 					89D0097C1E1B878D007E0627 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4G772GYV39;
 						ProvisioningStyle = Automatic;
 					};
 					89D009921E1B878E007E0627 = {
@@ -262,9 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89D009851E1B878D007E0627 /* SecondViewController.swift in Sources */,
+				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
+				89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */,
+				89D009851E1B878D007E0627 /* BarsVC.swift in Sources */,
+				89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */,
 				89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */,
-				89D009831E1B878D007E0627 /* FirstViewController.swift in Sources */,
+				89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G772GYV39;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.witherberry.Test;
@@ -428,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4G772GYV39;
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.witherberry.Test;

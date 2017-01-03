@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  BarsVC.swift
 //  Test
 //
 //  Created by Thad Duval on 1/3/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BarsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
