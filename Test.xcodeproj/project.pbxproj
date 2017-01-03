@@ -18,6 +18,7 @@
 		89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009B51E1C1C3D007E0627 /* BuyDrinksVC.swift */; };
 		89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */; };
 		89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009BA1E1C1CDB007E0627 /* ChatVC.swift */; };
+		89D009BD1E1C2BD8007E0627 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009BC1E1C2BD8007E0627 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		89D009B51E1C1C3D007E0627 /* BuyDrinksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinksVC.swift; sourceTree = "<group>"; };
 		89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDrinksVC.swift; sourceTree = "<group>"; };
 		89D009BA1E1C1CDB007E0627 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		89D009BC1E1C2BD8007E0627 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		89D009B11E1C1ADD007E0627 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89D009BC1E1C2BD8007E0627 /* TabBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D009BD1E1C2BD8007E0627 /* TabBar.swift in Sources */,
 				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
 				89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */,
 				89D009851E1B878D007E0627 /* BarsVC.swift in Sources */,
@@ -564,6 +568,7 @@
 				89D009A91E1B878E007E0627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D009AA1E1B878E007E0627 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +577,7 @@
 				89D009AC1E1B878E007E0627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D009AD1E1B878E007E0627 /* Build configuration list for PBXNativeTarget "TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +586,7 @@
 				89D009AF1E1B878E007E0627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
