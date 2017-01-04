@@ -8,26 +8,26 @@
 
 import Foundation
 
-protocol ModalTransitionListener {
+protocol PeopleModalTransitionListener {
     func popoverDismissed()
 }
 
-class ModalTransitionMediator {
+class PeopleModalTransitionMediator {
     /* Singleton */
-    class var instance: ModalTransitionMediator {
+    class var instance: PeopleModalTransitionMediator {
         struct Static {
-            static let instance: ModalTransitionMediator = ModalTransitionMediator()
+            static let instance: PeopleModalTransitionMediator = PeopleModalTransitionMediator()
         }
         return Static.instance
     }
     
-    private var listener: ModalTransitionListener?
+    private var listener: PeopleModalTransitionListener?
     
     private init() {
         
     }
     
-    func setListener(listener: ModalTransitionListener) {
+    func setListener(listener: PeopleModalTransitionListener) {
         self.listener = listener
     }
     

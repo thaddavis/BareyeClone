@@ -16,13 +16,15 @@ class SlideInMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var fillerView: UIView!
     
-    var presentingVC: UIViewController!
+    var presentingVC: UITabBarController!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        self.presentingVC = self.presentingViewController!
-    
+        presentingVC = self.presentingViewController!
+            as! UITabBarController
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -67,23 +69,24 @@ class SlideInMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.updateUI(menuItem: option)
         
         return cell
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         dismiss(animated: true, completion: {
-            //            let storyboard: UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-            //            
-            //            let viewController: AboutVC = storyboard.instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
-            //            
-            //            let nav: UINavigationController = storyboard.instantiateViewController(withIdentifier: "peopleNavigationController") as! UINavigationController
-            //            
-            //            nav.performSegue(withIdentifier: "peopleToAbout", sender: viewController)
-
-            ModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
             
-            //nav.pushViewController(viewController, animated: true)
+            
+            print(self.presentingVC.selectedIndex)
+            if (self.presentingVC.selectedIndex == 0) {
+                PeopleModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
+            } else if (self.presentingVC.selectedIndex == 1) {
+                BarsModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
+            }
+            
+            
         })
+        
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
