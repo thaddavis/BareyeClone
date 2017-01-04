@@ -9,10 +9,76 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab BarVC-->
+        <!--Slide In MenuVC-->
+        <scene sceneID="Fe1-x7-GKw">
+            <objects>
+                <viewController id="QGN-nf-PVc" customClass="SlideInMenuVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X4U-Cc-Zld"/>
+                        <viewControllerLayoutGuide type="bottom" id="YQP-0H-M8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cqm-rr-VY0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eKY-p3-Juk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="585-8O-Khk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SlideInMenuItemCell" rowHeight="71" id="HK5-Kc-YpU" customClass="SlideInMenuItemCell" customModule="Test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HK5-Kc-YpU" id="N2q-pd-n3u">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacts" translatesAutoresizingMaskIntoConstraints="NO" id="lGc-Y6-v0r">
+                                                    <rect key="frame" x="41" y="8" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXc-kg-jld">
+                                                    <rect key="frame" x="103" y="8" width="264" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="icon" destination="lGc-Y6-v0r" id="BPU-5V-78j"/>
+                                            <outlet property="label" destination="VXc-kg-jld" id="PnY-Iq-lbb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eKY-p3-Juk" firstAttribute="leading" secondItem="cqm-rr-VY0" secondAttribute="leading" id="HvI-b2-hLJ"/>
+                            <constraint firstAttribute="trailing" secondItem="eKY-p3-Juk" secondAttribute="trailing" id="QKA-OP-CK9"/>
+                            <constraint firstItem="YQP-0H-M8X" firstAttribute="top" secondItem="eKY-p3-Juk" secondAttribute="bottom" id="d7a-iY-Kjl"/>
+                            <constraint firstItem="eKY-p3-Juk" firstAttribute="top" secondItem="cqm-rr-VY0" secondAttribute="top" id="ugD-y5-ADL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fillerView" destination="585-8O-Khk" id="7Oe-Ii-lbq"/>
+                        <outlet property="tableView" destination="eKY-p3-Juk" id="zSe-c7-9yk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC3-Ti-GqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="-1313.793103448276"/>
+        </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="TabBarVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA" customClass="TabBar" customModule="Test" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -55,7 +121,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.99998784070000002" blue="0.99999201299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="People" id="taj-lj-deU"/>
+                                    <navigationItem title="People" id="taj-lj-deU">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="Hwd-j7-6Rh">
+                                            <connections>
+                                                <action selector="toSlideInMenu:" destination="API-QJ-p6o" id="6O6-pU-Tty"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -64,6 +136,9 @@
                     <tabBarItem key="tabBarItem" image="Contacts" selectedImage="Contacts" id="kYy-ge-bdx">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
                     </tabBarItem>
+                    <connections>
+                        <segue destination="QGN-nf-PVc" kind="presentation" identifier="toSlideInMenu" id="9QM-xQ-ZbK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFX-qL-1Mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +168,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.99998784070000002" blue="0.99999201299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Bars" id="j1h-Tw-rgc"/>
+                                    <navigationItem title="Bars" id="j1h-Tw-rgc">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="ICQ-CK-Oxx"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -131,7 +208,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.99998784065246582" blue="0.9999920129776001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="My Drinks" id="D2d-Z5-axc"/>
+                                    <navigationItem title="My Drinks" id="D2d-Z5-axc">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="EC2-4Q-WMr"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -207,7 +286,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="1" green="0.99998784065246582" blue="0.9999920129776001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
-                                    <navigationItem title="Chat" id="Iy2-yu-akR"/>
+                                    <navigationItem title="Chat" id="Iy2-yu-akR">
+                                        <barButtonItem key="leftBarButtonItem" image="Menu" id="4oR-tk-Hb2"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -225,6 +306,7 @@
     <resources>
         <image name="Contacts" width="50" height="50"/>
         <image name="Marker" width="50" height="50"/>
+        <image name="Menu" width="50" height="50"/>
         <image name="Money" width="50" height="50"/>
         <image name="Speech Bubble" width="50" height="50"/>
         <image name="Wine Glass" width="50" height="50"/>

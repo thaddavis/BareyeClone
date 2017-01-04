@@ -10,6 +10,8 @@ import UIKit
 
 class PeopleVC: UIViewController {
 
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +21,26 @@ class PeopleVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func toSlideInMenu(_ sender: Any) {
+        
+        performSegue(withIdentifier: "toSlideInMenu", sender: nil)
+        
+    }
 
-
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let controller = segue.destination as? SlideInMenuVC {
+            
+            slideInTransitioningDelegate.direction = .left
+            slideInTransitioningDelegate.disableCompactHeight = false
+            controller.transitioningDelegate = slideInTransitioningDelegate
+            controller.modalPresentationStyle = .custom
+            
+        }
+    }
+    
 }
 
