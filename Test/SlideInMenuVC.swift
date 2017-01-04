@@ -16,8 +16,12 @@ class SlideInMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var fillerView: UIView!
     
+    var presentingVC: UIViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presentingVC = self.presentingViewController!
     
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,6 +71,19 @@ class SlideInMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        dismiss(animated: true, completion: {
+            //            let storyboard: UIStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+            //            
+            //            let viewController: AboutVC = storyboard.instantiateViewController(withIdentifier: "AboutVC") as! AboutVC
+            //            
+            //            let nav: UINavigationController = storyboard.instantiateViewController(withIdentifier: "peopleNavigationController") as! UINavigationController
+            //            
+            //            nav.performSegue(withIdentifier: "peopleToAbout", sender: viewController)
+
+            ModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
+            
+            //nav.pushViewController(viewController, animated: true)
+        })
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

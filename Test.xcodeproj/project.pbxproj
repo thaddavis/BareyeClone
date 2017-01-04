@@ -12,6 +12,8 @@
 		89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B7F1E1C3EC0001F80DC /* SlideInPresentationManager.swift */; };
 		89474B821E1C439A001F80DC /* SlideInMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B811E1C439A001F80DC /* SlideInMenuVC.swift */; };
 		89474B841E1C498F001F80DC /* SlideInMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B831E1C498F001F80DC /* SlideInMenuItemCell.swift */; };
+		89474C001E1CB78C001F80DC /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474BFF1E1CB78C001F80DC /* AboutVC.swift */; };
+		89474C021E1CD1B5001F80DC /* ModalTransitionMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474C011E1CD1B5001F80DC /* ModalTransitionMediator.swift */; };
 		89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009801E1B878D007E0627 /* AppDelegate.swift */; };
 		89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009821E1B878D007E0627 /* PeopleVC.swift */; };
 		89D009851E1B878D007E0627 /* BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009841E1B878D007E0627 /* BarsVC.swift */; };
@@ -49,6 +51,8 @@
 		89474B7F1E1C3EC0001F80DC /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		89474B811E1C439A001F80DC /* SlideInMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInMenuVC.swift; sourceTree = "<group>"; };
 		89474B831E1C498F001F80DC /* SlideInMenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInMenuItemCell.swift; sourceTree = "<group>"; };
+		89474BFF1E1CB78C001F80DC /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		89474C011E1CD1B5001F80DC /* ModalTransitionMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTransitionMediator.swift; sourceTree = "<group>"; };
 		89D0097D1E1B878D007E0627 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D009801E1B878D007E0627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D009821E1B878D007E0627 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				89D009B71E1C1CB6007E0627 /* MyDrinksVC.swift */,
 				89D009BA1E1C1CDB007E0627 /* ChatVC.swift */,
 				89474B811E1C439A001F80DC /* SlideInMenuVC.swift */,
+				89474BFF1E1CB78C001F80DC /* AboutVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 		89D009B41E1C1AEF007E0627 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				89474C011E1CD1B5001F80DC /* ModalTransitionMediator.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -342,10 +348,12 @@
 				89474B7C1E1C3E71001F80DC /* SlideInPresentationAnimator.swift in Sources */,
 				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
 				89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */,
+				89474C001E1CB78C001F80DC /* AboutVC.swift in Sources */,
 				89D009851E1B878D007E0627 /* BarsVC.swift in Sources */,
 				89474B821E1C439A001F80DC /* SlideInMenuVC.swift in Sources */,
 				89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */,
 				89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */,
+				89474C021E1CD1B5001F80DC /* ModalTransitionMediator.swift in Sources */,
 				89474B841E1C498F001F80DC /* SlideInMenuItemCell.swift in Sources */,
 				89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */,
 				89474B7E1E1C3EA7001F80DC /* SlideInPresentationController.swift in Sources */,
