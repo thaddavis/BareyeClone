@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PeopleModalTransitionListener {
-    func popoverDismissed()
+    func popoverDismissed(selectedSlideInMenuOption: String)
 }
 
 class PeopleModalTransitionMediator {
@@ -31,7 +31,7 @@ class PeopleModalTransitionMediator {
         self.listener = listener
     }
     
-    func sendPopoverDismissed(modelChanged: Bool) {
-        listener?.popoverDismissed()
+    func sendPopoverDismissed(modelChanged: Bool, selectedSlideInMenuOption: String) {
+        listener?.popoverDismissed(selectedSlideInMenuOption: selectedSlideInMenuOption)
     }
 }

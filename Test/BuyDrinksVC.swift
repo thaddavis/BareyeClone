@@ -8,16 +8,59 @@
 
 import UIKit
 
-class BuyDrinksVC: UIViewController {
+class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
+    
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        BuyDrinksModalTransitionMediator.instance.setListener(listener: self)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func toSlideInMenu(_ sender: Any) {
+        performSegue(withIdentifier: "toSlideInMenuFromBuyDrinks", sender: self)
+    }
+    
+    func popoverDismissed(selectedSlideInMenuOption: String) {
+        
+        if (selectedSlideInMenuOption == "Profile") {
+            performSegue(withIdentifier: "buyDrinksToProfile", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Settings") {
+            performSegue(withIdentifier: "buyDrinksToSettings", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Sign Out") {
+            
+            // PERFORM SIGN OUT LOGIC
+            
+            //performSegue(withIdentifier: "buyDrinksToSignOut", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "About") {
+            performSegue(withIdentifier: "buyDrinksToAbout", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Contact") {
+            performSegue(withIdentifier: "buyDrinksToContact", sender: self)
+            //------
+            
+        }
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let controller = segue.destination as? SlideInMenuVC {
+            
+            slideInTransitioningDelegate.direction = .left
+            slideInTransitioningDelegate.disableCompactHeight = false
+            controller.transitioningDelegate = slideInTransitioningDelegate
+            controller.modalPresentationStyle = .custom
+        }
+        
     }
     
     

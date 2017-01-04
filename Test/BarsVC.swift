@@ -22,8 +22,33 @@ class BarsVC: UIViewController, BarsModalTransitionListener {
         performSegue(withIdentifier: "toSlideInMenuFromBars", sender: self)
     }
     
-    func popoverDismissed() {
-        performSegue(withIdentifier: "barsToAbout", sender: self)
+    func popoverDismissed(selectedSlideInMenuOption: String) {
+        
+        if (selectedSlideInMenuOption == "Profile") {
+            performSegue(withIdentifier: "barsToProfile", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Settings") {
+            performSegue(withIdentifier: "barsToSettings", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Sign Out") {
+            
+            // PERFORM SIGN OUT LOGIC
+            
+            //performSegue(withIdentifier: "barsToSignOut", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "About") {
+            performSegue(withIdentifier: "barsToAbout", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Contact") {
+            performSegue(withIdentifier: "barsToContact", sender: self)
+            //------
+            
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

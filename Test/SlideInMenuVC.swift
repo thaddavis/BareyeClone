@@ -76,14 +76,17 @@ class SlideInMenuVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         dismiss(animated: true, completion: {
             
-            
-            print(self.presentingVC.selectedIndex)
             if (self.presentingVC.selectedIndex == 0) {
-                PeopleModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
+                PeopleModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true, selectedSlideInMenuOption: self.menuOptions[indexPath.row]["label"]!)
             } else if (self.presentingVC.selectedIndex == 1) {
-                BarsModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true)
+                BarsModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true, selectedSlideInMenuOption: self.menuOptions[indexPath.row]["label"]!)
+            } else if (self.presentingVC.selectedIndex == 2) {
+                BuyDrinksModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true, selectedSlideInMenuOption: self.menuOptions[indexPath.row]["label"]!)
+            } else if (self.presentingVC.selectedIndex == 3) {
+                MyDrinksModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true, selectedSlideInMenuOption: self.menuOptions[indexPath.row]["label"]!)
+            } else {
+                ChatModalTransitionMediator.instance.sendPopoverDismissed(modelChanged: true, selectedSlideInMenuOption: self.menuOptions[indexPath.row]["label"]!)
             }
-            
             
         })
         

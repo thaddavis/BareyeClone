@@ -1,5 +1,5 @@
 //
-//  BarsModalTransitionMediator.swift
+//  BuyDrinksModalTransitionMediator.swift
 //  Test
 //
 //  Created by Thad Duval on 1/4/17.
@@ -8,26 +8,26 @@
 
 import Foundation
 
-protocol BarsModalTransitionListener {
+protocol BuyDrinksModalTransitionListener {
     func popoverDismissed(selectedSlideInMenuOption: String)
 }
 
-class BarsModalTransitionMediator {
+class BuyDrinksModalTransitionMediator {
     /* Singleton */
-    class var instance: BarsModalTransitionMediator {
+    class var instance: BuyDrinksModalTransitionMediator {
         struct Static {
-            static let instance: BarsModalTransitionMediator = BarsModalTransitionMediator()
+            static let instance: BuyDrinksModalTransitionMediator = BuyDrinksModalTransitionMediator()
         }
         return Static.instance
     }
     
-    private var listener: BarsModalTransitionListener?
+    private var listener: BuyDrinksModalTransitionListener?
     
     private init() {
         
     }
     
-    func setListener(listener: BarsModalTransitionListener) {
+    func setListener(listener: BuyDrinksModalTransitionListener) {
         self.listener = listener
     }
     

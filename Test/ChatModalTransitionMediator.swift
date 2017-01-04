@@ -1,5 +1,5 @@
 //
-//  BarsModalTransitionMediator.swift
+//  ChatModalTransitionMediator.swift
 //  Test
 //
 //  Created by Thad Duval on 1/4/17.
@@ -8,26 +8,26 @@
 
 import Foundation
 
-protocol BarsModalTransitionListener {
+protocol ChatModalTransitionListener {
     func popoverDismissed(selectedSlideInMenuOption: String)
 }
 
-class BarsModalTransitionMediator {
+class ChatModalTransitionMediator {
     /* Singleton */
-    class var instance: BarsModalTransitionMediator {
+    class var instance: ChatModalTransitionMediator {
         struct Static {
-            static let instance: BarsModalTransitionMediator = BarsModalTransitionMediator()
+            static let instance: ChatModalTransitionMediator = ChatModalTransitionMediator()
         }
         return Static.instance
     }
     
-    private var listener: BarsModalTransitionListener?
+    private var listener: ChatModalTransitionListener?
     
     private init() {
         
     }
     
-    func setListener(listener: BarsModalTransitionListener) {
+    func setListener(listener: ChatModalTransitionListener) {
         self.listener = listener
     }
     
@@ -35,3 +35,4 @@ class BarsModalTransitionMediator {
         listener?.popoverDismissed(selectedSlideInMenuOption: selectedSlideInMenuOption)
     }
 }
+

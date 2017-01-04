@@ -22,8 +22,33 @@ class PeopleVC: UIViewController, PeopleModalTransitionListener {
         performSegue(withIdentifier: "toSlideInMenuFromPeople", sender: self)
     }
     
-    func popoverDismissed() {
-        performSegue(withIdentifier: "peopleToAbout", sender: self)
+    func popoverDismissed(selectedSlideInMenuOption: String) {
+        
+        if (selectedSlideInMenuOption == "Profile") {
+            performSegue(withIdentifier: "peopleToProfile", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Settings") {
+            performSegue(withIdentifier: "peopleToSettings", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Sign Out") {
+            
+            // PERFORM SIGN OUT LOGIC
+            
+            //performSegue(withIdentifier: "peopleToSignOut", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "About") {
+            performSegue(withIdentifier: "peopleToAbout", sender: self)
+            //------
+            
+        } else if (selectedSlideInMenuOption == "Contact") {
+            performSegue(withIdentifier: "peopleToContact", sender: self)
+            //------
+            
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
