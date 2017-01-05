@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOm-z2-D6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="-2633"/>
+            <point key="canvasLocation" x="476" y="-2797"/>
         </scene>
         <!--Bars-->
         <scene sceneID="fmE-mU-hjB">
@@ -513,10 +513,10 @@
         <image name="Wine Glass" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D1t-Oc-7vx"/>
-        <segue reference="KHC-d6-DZ6"/>
-        <segue reference="Wlw-bU-FuY"/>
-        <segue reference="MhA-WR-S3n"/>
-        <segue reference="HzG-pS-qn6"/>
+        <segue reference="mdZ-fm-Kaf"/>
+        <segue reference="vDe-pr-h37"/>
+        <segue reference="hDc-u2-5FB"/>
+        <segue reference="yRI-YF-eMQ"/>
+        <segue reference="4RS-4s-hNr"/>
     </inferredMetricsTieBreakers>
 </document>
