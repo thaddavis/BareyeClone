@@ -18,6 +18,11 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
         BuyDrinksModalTransitionMediator.instance.setListener(listener: self)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func toSlideInMenu(_ sender: Any) {
         performSegue(withIdentifier: "toSlideInMenuFromBuyDrinks", sender: self)
     }

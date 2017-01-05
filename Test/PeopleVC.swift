@@ -12,15 +12,46 @@ class PeopleVC: UIViewController, PeopleModalTransitionListener {
 
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
+    @IBOutlet weak var containerViewContacts: UIView!
+    @IBOutlet weak var containerViewNearbyUsers: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         PeopleModalTransitionMediator.instance.setListener(listener: self)
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
 
     @IBAction func toSlideInMenu(_ sender: Any) {
         performSegue(withIdentifier: "toSlideInMenuFromPeople", sender: self)
     }
+    
+    @IBAction func showComponent(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            //            UIView.animateWithDuration(0.5, animations: {
+            //                self.containerViewA.alpha = 1
+            //                self.containerViewB.alpha = 0
+            //            })
+            
+            self.containerViewContacts.alpha = 1
+            self.containerViewNearbyUsers.alpha = 0
+            
+        } else {
+            //            UIView.animateWithDuration(0.5, animations: {
+            //                self.containerViewA.alpha = 0
+            //                self.containerViewB.alpha = 1
+            //            })
+            
+            self.containerViewContacts.alpha = 0
+            self.containerViewNearbyUsers.alpha = 1
+        }
+    }
+
     
     func popoverDismissed(selectedSlideInMenuOption: String) {
         

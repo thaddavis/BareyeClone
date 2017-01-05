@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="128" width="375" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HK5-Kc-YpU" id="N2q-pd-n3u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacts" translatesAutoresizingMaskIntoConstraints="NO" id="lGc-Y6-v0r">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LC3-Ti-GqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817" y="-3252"/>
+            <point key="canvasLocation" x="1682" y="-6417"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -126,13 +126,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3A-FZ-sUA">
-                                <rect key="frame" x="133" y="303" width="109" height="61"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zgq-px-PIV">
+                                <rect key="frame" x="107" y="72" width="160" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="Contacts"/>
+                                    <segment title="Nearby"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showComponentWithSender:" destination="9C8-HR-dgo" eventType="valueChanged" id="Gn8-Mo-Puk"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oT-lP-x9I" userLabel="ContainerViewContacts">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="RwA-lN-0UV" kind="embed" id="e0v-vO-xb9"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVo-kh-dSI" userLabel="ContainerViewNearbyUsers">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="MGO-JY-ELC" kind="embed" id="ftS-9M-417"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -144,6 +163,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="containerViewContacts" destination="4oT-lP-x9I" id="vlM-mn-DxE"/>
+                        <outlet property="containerViewNearbyUsers" destination="kVo-kh-dSI" id="d5m-Xh-69a"/>
                         <segue destination="QGN-nf-PVc" kind="presentation" identifier="toSlideInMenuFromPeople" id="mdZ-fm-Kaf"/>
                         <segue destination="LQo-DK-FAP" kind="show" identifier="peopleToProfile" id="yRI-YF-eMQ"/>
                         <segue destination="HBO-il-8sa" kind="show" identifier="peopleToSettings" id="hDc-u2-5FB"/>
@@ -153,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOm-z2-D6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="-2797"/>
+            <point key="canvasLocation" x="572" y="-2672.1139430284861"/>
         </scene>
         <!--Bars-->
         <scene sceneID="fmE-mU-hjB">
@@ -402,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvO-aq-eo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2817" y="-521"/>
+            <point key="canvasLocation" x="1854" y="-4216"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="Noc-06-R7w">
@@ -429,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FV-Sz-jwF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816.8000000000002" y="-2270.0149925037481"/>
+            <point key="canvasLocation" x="1777" y="-5685"/>
         </scene>
         <!--ContactVC-->
         <scene sceneID="pmW-b3-g9q">
@@ -456,7 +477,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHk-h9-lsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816.8000000000002" y="517.6911544227886"/>
+            <point key="canvasLocation" x="1854" y="-3553"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="xhl-IM-Rea">
@@ -483,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhU-bM-lxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816.8000000000002" y="-1508.095952023988"/>
+            <point key="canvasLocation" x="1854" y="-4924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tgy-C0-hWd">
@@ -503,6 +524,145 @@
             </objects>
             <point key="canvasLocation" x="-391" y="-1770"/>
         </scene>
+        <!--People ContactsVC-->
+        <scene sceneID="3Eg-GV-yjm">
+            <objects>
+                <viewController id="RwA-lN-0UV" customClass="People_ContactsVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqF-nj-FHO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-rR-igA">
+                                <rect key="frame" x="146" y="228" width="83" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XrM-Hh-gPz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="He7-Ay-Tpq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wpd-WC-d1d">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dXb-Sj-SP9">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="He7-Ay-Tpq" firstAttribute="top" secondItem="XrM-Hh-gPz" secondAttribute="bottom" id="3oA-De-Yu7"/>
+                            <constraint firstItem="XrM-Hh-gPz" firstAttribute="top" secondItem="hqF-nj-FHO" secondAttribute="top" id="89R-km-Vc3"/>
+                            <constraint firstItem="XrM-Hh-gPz" firstAttribute="leading" secondItem="hqF-nj-FHO" secondAttribute="leading" id="N7o-zi-azd"/>
+                            <constraint firstItem="He7-Ay-Tpq" firstAttribute="leading" secondItem="hqF-nj-FHO" secondAttribute="leading" id="Rqp-yC-JTN"/>
+                            <constraint firstAttribute="trailing" secondItem="He7-Ay-Tpq" secondAttribute="trailing" id="dM4-hZ-lDo"/>
+                            <constraint firstAttribute="trailing" secondItem="XrM-Hh-gPz" secondAttribute="trailing" id="hIh-BD-H1W"/>
+                            <constraint firstAttribute="bottom" secondItem="He7-Ay-Tpq" secondAttribute="bottom" id="wP7-EC-gz0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactsCollectionView" destination="He7-Ay-Tpq" id="TSI-49-BPg"/>
+                        <outlet property="searchBarForContacts" destination="XrM-Hh-gPz" id="yz9-UH-neE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQO-J2-KCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946.4000000000001" y="-2900.1499250374814"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wae-tM-Oks">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="MGO-JY-ELC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vzj-y0-L6D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MLU-vT-hZY" kind="relationship" relationship="rootViewController" id="jq3-dp-isU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q3B-qw-MdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="-2309"/>
+        </scene>
+        <!--People NearbyVC-->
+        <scene sceneID="Qsp-tU-Tpc">
+            <objects>
+                <viewController id="MLU-vT-hZY" customClass="People_NearbyVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bCc-fE-I4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="IYT-47-cEi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pL9-s3-5S7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-q3-Sdr">
+                                <rect key="frame" x="0.0" y="59" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-Ey-0PO">
+                                <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-wk-GDO">
+                                <rect key="frame" x="0.0" y="203" width="375" height="307"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eIg-Lw-646">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tCS-eQ-8x5">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nearby Users" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvx-gi-hxB">
+                                <rect key="frame" x="75" y="20" width="225" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BAE-hd-5r3"/>
+                    <connections>
+                        <outlet property="nearbyUsersCollectionView" destination="lLb-wk-GDO" id="ATD-V4-CBm"/>
+                        <outlet property="searchBarForNearbyUsers" destination="SfH-Ey-0PO" id="ERc-be-2Dx"/>
+                        <outlet property="searchRadiusPicker" destination="Pd8-q3-Sdr" id="RZL-io-EZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-cQ-Lih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733.5999999999999" y="-2310.9445277361319"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Contacts" width="50" height="50"/>
@@ -513,10 +673,10 @@
         <image name="Wine Glass" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4RS-4s-hNr"/>
+        <segue reference="hDc-u2-5FB"/>
         <segue reference="mdZ-fm-Kaf"/>
         <segue reference="vDe-pr-h37"/>
-        <segue reference="hDc-u2-5FB"/>
         <segue reference="yRI-YF-eMQ"/>
-        <segue reference="4RS-4s-hNr"/>
     </inferredMetricsTieBreakers>
 </document>

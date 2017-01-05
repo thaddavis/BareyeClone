@@ -18,6 +18,11 @@ class BarsVC: UIViewController, BarsModalTransitionListener {
         BarsModalTransitionMediator.instance.setListener(listener: self)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func toSlideInMenu(_ sender: Any) {
         performSegue(withIdentifier: "toSlideInMenuFromBars", sender: self)
     }

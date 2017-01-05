@@ -21,6 +21,8 @@
 		895EE5591E1D9562004C84BF /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895EE5581E1D9562004C84BF /* ProfileVC.swift */; };
 		895EE55B1E1D9571004C84BF /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895EE55A1E1D9571004C84BF /* SettingsVC.swift */; };
 		895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895EE55C1E1D957E004C84BF /* ContactVC.swift */; };
+		8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */; };
+		8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */; };
 		89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009801E1B878D007E0627 /* AppDelegate.swift */; };
 		89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009821E1B878D007E0627 /* PeopleVC.swift */; };
 		89D009851E1B878D007E0627 /* BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009841E1B878D007E0627 /* BarsVC.swift */; };
@@ -67,6 +69,8 @@
 		895EE5581E1D9562004C84BF /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		895EE55A1E1D9571004C84BF /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		895EE55C1E1D957E004C84BF /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_ContactsVC.swift; sourceTree = "<group>"; };
+		8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_NearbyVC.swift; sourceTree = "<group>"; };
 		89D0097D1E1B878D007E0627 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D009801E1B878D007E0627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D009821E1B878D007E0627 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
@@ -125,12 +129,50 @@
 		895EE5511E1D8E0F004C84BF /* SlideInMenu */ = {
 			isa = PBXGroup;
 			children = (
+				895EE5581E1D9562004C84BF /* ProfileVC.swift */,
 				89474B811E1C439A001F80DC /* SlideInMenuVC.swift */,
 				89474BFF1E1CB78C001F80DC /* AboutVC.swift */,
 				895EE55A1E1D9571004C84BF /* SettingsVC.swift */,
 				895EE55C1E1D957E004C84BF /* ContactVC.swift */,
 			);
 			name = SlideInMenu;
+			sourceTree = "<group>";
+		};
+		8976DAC51E1DEC3F00C8279D /* PeopleVCFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+				8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */,
+				8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */,
+			);
+			name = PeopleVCFunctionality;
+			sourceTree = "<group>";
+		};
+		8976DAC61E1DEC5300C8279D /* BarsVCFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BarsVCFunctionality;
+			sourceTree = "<group>";
+		};
+		8976DAC71E1DEC6400C8279D /* BuyDrinksVCFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BuyDrinksVCFunctionality;
+			sourceTree = "<group>";
+		};
+		8976DAC81E1DECA400C8279D /* MyDrinksVCFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyDrinksVCFunctionality;
+			sourceTree = "<group>";
+		};
+		8976DAC91E1DECFF00C8279D /* ChatVCFunctionality */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ChatVCFunctionality;
 			sourceTree = "<group>";
 		};
 		89D009741E1B878D007E0627 = {
@@ -208,7 +250,11 @@
 		89D009B21E1C1AE2007E0627 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				895EE5581E1D9562004C84BF /* ProfileVC.swift */,
+				8976DAC91E1DECFF00C8279D /* ChatVCFunctionality */,
+				8976DAC81E1DECA400C8279D /* MyDrinksVCFunctionality */,
+				8976DAC71E1DEC6400C8279D /* BuyDrinksVCFunctionality */,
+				8976DAC61E1DEC5300C8279D /* BarsVCFunctionality */,
+				8976DAC51E1DEC3F00C8279D /* PeopleVCFunctionality */,
 				895EE5511E1D8E0F004C84BF /* SlideInMenu */,
 				89D009821E1B878D007E0627 /* PeopleVC.swift */,
 				89D009841E1B878D007E0627 /* BarsVC.swift */,
@@ -376,7 +422,9 @@
 				89D009BD1E1C2BD8007E0627 /* TabBar.swift in Sources */,
 				89474B7C1E1C3E71001F80DC /* SlideInPresentationAnimator.swift in Sources */,
 				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
+				8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */,
 				895EE5591E1D9562004C84BF /* ProfileVC.swift in Sources */,
+				8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */,
 				89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */,
 				89474C001E1CB78C001F80DC /* AboutVC.swift in Sources */,
 				895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */,
