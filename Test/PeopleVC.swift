@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Contacts
 
 class PeopleVC: UIViewController, PeopleModalTransitionListener {
 
@@ -33,25 +34,20 @@ class PeopleVC: UIViewController, PeopleModalTransitionListener {
     
     @IBAction func showComponent(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            //            UIView.animateWithDuration(0.5, animations: {
-            //                self.containerViewA.alpha = 1
-            //                self.containerViewB.alpha = 0
-            //            })
+            
+            view.endEditing(true)
             
             self.containerViewContacts.alpha = 1
             self.containerViewNearbyUsers.alpha = 0
             
         } else {
-            //            UIView.animateWithDuration(0.5, animations: {
-            //                self.containerViewA.alpha = 0
-            //                self.containerViewB.alpha = 1
-            //            })
+            
+            view.endEditing(true)
             
             self.containerViewContacts.alpha = 0
             self.containerViewNearbyUsers.alpha = 1
         }
     }
-
     
     func popoverDismissed(selectedSlideInMenuOption: String) {
         

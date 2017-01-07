@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="128" width="375" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HK5-Kc-YpU" id="N2q-pd-n3u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contacts" translatesAutoresizingMaskIntoConstraints="NO" id="lGc-Y6-v0r">
@@ -149,7 +150,7 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="510"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="MGO-JY-ELC" kind="embed" id="ftS-9M-417"/>
+                                    <segue destination="tNa-44-Kv4" kind="embed" id="I90-CS-1Yk"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -619,54 +620,61 @@
             <point key="canvasLocation" x="1946.4000000000001" y="-2900.1499250374814"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="wae-tM-Oks">
+        <scene sceneID="Hh4-J2-sfn">
             <objects>
-                <navigationController navigationBarHidden="YES" id="MGO-JY-ELC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vzj-y0-L6D">
+                <navigationController navigationBarHidden="YES" id="tNa-44-Kv4" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NYq-Nu-jWA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MLU-vT-hZY" kind="relationship" relationship="rootViewController" id="jq3-dp-isU"/>
+                        <segue destination="cbi-Na-kx7" kind="relationship" relationship="rootViewController" id="EIm-TI-baw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q3B-qw-MdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezb-0p-Wwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="-2309"/>
+            <point key="canvasLocation" x="1946" y="-2213"/>
         </scene>
-        <!--People NearbyVC-->
-        <scene sceneID="Qsp-tU-Tpc">
+        <!--Nearby Users-->
+        <scene sceneID="gqq-sC-R7p">
             <objects>
-                <viewController id="MLU-vT-hZY" customClass="People_NearbyVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cbi-Na-kx7" customClass="People_NearbyVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bCc-fE-I4T"/>
-                        <viewControllerLayoutGuide type="bottom" id="IYT-47-cEi"/>
+                        <viewControllerLayoutGuide type="top" id="0fY-9p-eBv"/>
+                        <viewControllerLayoutGuide type="bottom" id="2kw-tX-h0a"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="pL9-s3-5S7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                    <view key="view" contentMode="scaleToFill" id="0hW-yy-x2K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pd8-q3-Sdr">
-                                <rect key="frame" x="0.0" y="59" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-Ey-0PO">
-                                <rect key="frame" x="0.0" y="159" width="375" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-9y-gbS">
+                                <rect key="frame" x="110" y="0.0" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="SortingOptions"/>
+                                <connections>
+                                    <action selector="pressedConfigureGeoQuery:" destination="cbi-Na-kx7" eventType="touchUpInside" id="keX-Ar-v6e"/>
+                                    <segue destination="FLc-aR-dT3" kind="presentation" identifier="toConfigureGeoQuery" id="isp-TA-0i0"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CU6-sS-EAN">
+                                <rect key="frame" x="0.0" y="50" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-wk-GDO">
-                                <rect key="frame" x="0.0" y="203" width="375" height="307"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tUJ-KE-7sV">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eIg-Lw-646">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EJ0-5P-uPh">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tCS-eQ-8x5">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hi7-wd-xwS">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -676,26 +684,91 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nearby Users" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvx-gi-hxB">
-                                <rect key="frame" x="75" y="20" width="225" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlV-H0-olD">
+                                <rect key="frame" x="107.5" y="253.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="1Bt-Y0-cty"/>
+                                    <constraint firstAttribute="height" constant="160" id="APV-4V-Fw0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IlV-H0-olD" firstAttribute="centerX" secondItem="0hW-yy-x2K" secondAttribute="centerX" id="9Eo-CV-0bO"/>
+                            <constraint firstItem="IlV-H0-olD" firstAttribute="centerY" secondItem="0hW-yy-x2K" secondAttribute="centerY" id="CTh-KE-s8P"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BAE-hd-5r3"/>
+                    <navigationItem key="navigationItem" title="Nearby Users" id="WTi-uU-Upp">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0w6-bN-dEb"/>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="nearbyUsersCollectionView" destination="lLb-wk-GDO" id="ATD-V4-CBm"/>
-                        <outlet property="searchBarForNearbyUsers" destination="SfH-Ey-0PO" id="ERc-be-2Dx"/>
-                        <outlet property="searchRadiusPicker" destination="Pd8-q3-Sdr" id="RZL-io-EZ2"/>
+                        <outlet property="geoQueryLabel" destination="IlV-H0-olD" id="xFo-FD-Ce6"/>
+                        <outlet property="nearbyUsersCollectionView" destination="tUJ-KE-7sV" id="bK7-eY-Gle"/>
+                        <outlet property="searchBarForNearbyUsers" destination="CU6-sS-EAN" id="PGR-rR-rac"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-cQ-Lih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Iv-45-Oag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733.5999999999999" y="-2310.9445277361319"/>
+            <point key="canvasLocation" x="2852" y="-2213.3433283358322"/>
+        </scene>
+        <!--People Configure Geo QueryVC-->
+        <scene sceneID="bhU-Bh-2oY">
+            <objects>
+                <viewController id="FLc-aR-dT3" customClass="People_ConfigureGeoQueryVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8N1-aL-POS"/>
+                        <viewControllerLayoutGuide type="bottom" id="NS1-Rx-dN2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vhB-yV-Ye3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc4-tQ-bJs">
+                                <rect key="frame" x="16" y="20" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5IY-SG-FvY"/>
+                                    <constraint firstAttribute="width" constant="80" id="WGH-DE-Wiw"/>
+                                </constraints>
+                                <state key="normal" image="Undo"/>
+                                <connections>
+                                    <action selector="backToPeopleVC:" destination="FLc-aR-dT3" eventType="touchUpInside" id="MdP-NP-l9H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Search Radius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91y-49-jZ4">
+                                <rect key="frame" x="16" y="120" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QQ-0q-NCY">
+                                <rect key="frame" x="0.0" y="212" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vc4-tQ-bJs" firstAttribute="top" secondItem="8N1-aL-POS" secondAttribute="bottom" constant="20" id="5J4-mz-XCS"/>
+                            <constraint firstItem="vc4-tQ-bJs" firstAttribute="leading" secondItem="vhB-yV-Ye3" secondAttribute="leadingMargin" id="EvH-Yy-S5k"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="picker" destination="7QQ-0q-NCY" id="TDu-PJ-B8g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmz-me-ktz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3688.8000000000002" y="-2358.170914542729"/>
         </scene>
     </scenes>
     <resources>
@@ -703,15 +776,17 @@
         <image name="Marker" width="50" height="50"/>
         <image name="Menu" width="50" height="50"/>
         <image name="Money" width="50" height="50"/>
+        <image name="SortingOptions" width="50" height="50"/>
         <image name="Speech Bubble" width="50" height="50"/>
+        <image name="Undo" width="50" height="50"/>
         <image name="Wine Glass" width="50" height="50"/>
         <image name="default-profile-picture" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4RS-4s-hNr"/>
-        <segue reference="hDc-u2-5FB"/>
         <segue reference="mdZ-fm-Kaf"/>
         <segue reference="vDe-pr-h37"/>
+        <segue reference="hDc-u2-5FB"/>
         <segue reference="yRI-YF-eMQ"/>
+        <segue reference="4RS-4s-hNr"/>
     </inferredMetricsTieBreakers>
 </document>

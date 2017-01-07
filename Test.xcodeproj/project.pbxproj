@@ -26,6 +26,7 @@
 		89CBA2E81E2088C0004BA910 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */; };
 		89CBA2EA1E209DF7004BA910 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E91E209DF7004BA910 /* RoundedImage.swift */; };
 		89CBA2EC1E209E3E004BA910 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2EB1E209E3E004BA910 /* Constants.swift */; };
+		89CBA2EE1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2ED1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift */; };
 		89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009801E1B878D007E0627 /* AppDelegate.swift */; };
 		89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009821E1B878D007E0627 /* PeopleVC.swift */; };
 		89D009851E1B878D007E0627 /* BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D009841E1B878D007E0627 /* BarsVC.swift */; };
@@ -77,6 +78,7 @@
 		89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		89CBA2E91E209DF7004BA910 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		89CBA2EB1E209E3E004BA910 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89CBA2ED1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_ConfigureGeoQuery.swift; sourceTree = "<group>"; };
 		89D0097D1E1B878D007E0627 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D009801E1B878D007E0627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D009821E1B878D007E0627 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */,
 				8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */,
+				89CBA2ED1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift */,
 			);
 			name = PeopleVCFunctionality;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				89474C021E1CD1B5001F80DC /* PeopleModalTransitionMediator.swift in Sources */,
 				89474B841E1C498F001F80DC /* SlideInMenuItemCell.swift in Sources */,
 				89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */,
+				89CBA2EE1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift in Sources */,
 				89474B7E1E1C3EA7001F80DC /* SlideInPresentationController.swift in Sources */,
 				89D009831E1B878D007E0627 /* PeopleVC.swift in Sources */,
 			);

@@ -7,10 +7,7 @@
 //
 
 import UIKit
-
 import Contacts
-//import ContactsUI
-
 
 class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
@@ -35,7 +32,6 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         searchBarForContacts.returnKeyType = UIReturnKeyType.done
         searchBarForContacts.enablesReturnKeyAutomatically = false
-        
         
         // Fetch Contacts asynchronously
         DispatchQueue.global(qos: .background).async {
@@ -65,22 +61,18 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     //----------********** UICollectionViewDelegate CODE
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        var poke: Pokemon!
-//        
-//        if inSearchMode {
-//            poke = filteredPokemon[indexPath.row]
-//        } else {
-//            poke = pokemon[indexPath.row]
-//        }
-//        
-//        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
         
     }
     
@@ -143,24 +135,6 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
             
             let lower = searchBar.text!.lowercased()
             
-            print("lower")
-            print(lower)
-            
-            for c in contacts {
-                print(c.givenName)
-                print(c.givenName.lowercased().range(of: lower) != nil)
-                print(c.middleName)
-                print(c.middleName.lowercased().range(of: lower) != nil)
-                print(c.familyName)
-                print(c.familyName.lowercased().range(of: lower) != nil)
-                print("test")
-                print(c.givenName.lowercased().range(of: lower) != nil ||
-                    c.middleName.lowercased().range(of: lower) != nil ||
-                    c.familyName.lowercased().range(of: lower) != nil)
-                print("*************")
-            
-            }
-            
             filteredContacts = contacts.filter(
                 {
                     $0.givenName.lowercased().range(of: lower) != nil ||
@@ -197,6 +171,7 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
             })
         }
         catch let error as NSError {
+            
             print(error.localizedDescription)
         } 
         
