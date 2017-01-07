@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892ED58A1E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892ED5891E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift */; };
+		892ED58C1E210BC00065AA72 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892ED58B1E210BC00065AA72 /* Bar.swift */; };
+		892ED58E1E2175FA0065AA72 /* BarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892ED58D1E2175FA0065AA72 /* BarTableViewCell.swift */; };
 		89474B7C1E1C3E71001F80DC /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B7B1E1C3E71001F80DC /* SlideInPresentationAnimator.swift */; };
 		89474B7E1E1C3EA7001F80DC /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B7D1E1C3EA7001F80DC /* SlideInPresentationController.swift */; };
 		89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89474B7F1E1C3EC0001F80DC /* SlideInPresentationManager.swift */; };
@@ -59,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		892ED5891E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bars_ConfigureGeoQuery.swift; sourceTree = "<group>"; };
+		892ED58B1E210BC00065AA72 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		892ED58D1E2175FA0065AA72 /* BarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarTableViewCell.swift; sourceTree = "<group>"; };
 		89474B7B1E1C3E71001F80DC /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		89474B7D1E1C3EA7001F80DC /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		89474B7F1E1C3EC0001F80DC /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 		8976DAC61E1DEC5300C8279D /* BarsVCFunctionality */ = {
 			isa = PBXGroup;
 			children = (
+				892ED5891E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift */,
 			);
 			name = BarsVCFunctionality;
 			sourceTree = "<group>";
@@ -243,6 +250,7 @@
 		89D009B01E1C1AD7007E0627 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				892ED58B1E210BC00065AA72 /* Bar.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 				89474B831E1C498F001F80DC /* SlideInMenuItemCell.swift */,
 				89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */,
 				89CBA2E91E209DF7004BA910 /* RoundedImage.swift */,
+				892ED58D1E2175FA0065AA72 /* BarTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -431,10 +440,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892ED58C1E210BC00065AA72 /* Bar.swift in Sources */,
 				89D009BD1E1C2BD8007E0627 /* TabBar.swift in Sources */,
 				89474B7C1E1C3E71001F80DC /* SlideInPresentationAnimator.swift in Sources */,
 				89CBA2EA1E209DF7004BA910 /* RoundedImage.swift in Sources */,
 				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
+				892ED58E1E2175FA0065AA72 /* BarTableViewCell.swift in Sources */,
 				8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */,
 				895EE5591E1D9562004C84BF /* ProfileVC.swift in Sources */,
 				8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */,
@@ -452,6 +463,7 @@
 				89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */,
 				895EE5531E1D8E71004C84BF /* BuyDrinksModalTransitionMediator.swift in Sources */,
 				89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */,
+				892ED58A1E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift in Sources */,
 				89474C021E1CD1B5001F80DC /* PeopleModalTransitionMediator.swift in Sources */,
 				89474B841E1C498F001F80DC /* SlideInMenuItemCell.swift in Sources */,
 				89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */,
