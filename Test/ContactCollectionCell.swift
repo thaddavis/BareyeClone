@@ -23,9 +23,15 @@ class ContactCollectionCell: UICollectionViewCell {
     
     func configureCell(_ contact: CNContact) {
         self.CE = contact
-        nameLbl.text = "label label label label label label label label"
-        //nameLbl.text = self.CE.name
-        //thumbImg.image = UIImage(named: "\(self.CE.pokedexId)")
+        nameLbl.text = self.CE.givenName + " " + self.CE.middleName + " " + self.CE.familyName
+        
+        
+        if ((self.CE.imageData) != nil) {
+            thumbImg.image = UIImage(data: self.CE.imageData!)
+        } else {
+            thumbImg.image = UIImage(named: "default-profile-picture.jpg")
+        }
+        
     }
     
 }

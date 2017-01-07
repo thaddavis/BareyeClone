@@ -9,7 +9,7 @@
 import UIKit
 
 import Contacts
-import ContactsUI
+//import ContactsUI
 
 
 class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
@@ -43,10 +43,7 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
             
             DispatchQueue.main.async() {
                 
-                print(self.contacts.count)
-                print(self.contacts[1].givenName)
-                //print(self.contacts[1].imageData as Any)
-                print("done")
+                self.contactsCollectionView.reloadData()
                 
             }
         
@@ -146,7 +143,32 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
             
             let lower = searchBar.text!.lowercased()
             
-            // filteredContacts = contacts.filter({$0.name.range(of: lower) != nil})
+            print("lower")
+            print(lower)
+            
+            for c in contacts {
+                print(c.givenName)
+                print(c.givenName.lowercased().range(of: lower) != nil)
+                print(c.middleName)
+                print(c.middleName.lowercased().range(of: lower) != nil)
+                print(c.familyName)
+                print(c.familyName.lowercased().range(of: lower) != nil)
+                print("test")
+                print(c.givenName.lowercased().range(of: lower) != nil ||
+                    c.middleName.lowercased().range(of: lower) != nil ||
+                    c.familyName.lowercased().range(of: lower) != nil)
+                print("*************")
+            
+            }
+            
+            filteredContacts = contacts.filter(
+                {
+                    $0.givenName.lowercased().range(of: lower) != nil ||
+                    $0.middleName.lowercased().range(of: lower) != nil ||
+                    $0.familyName.lowercased().range(of: lower) != nil
+                }
+            )
+            
             contactsCollectionView.reloadData()
         }
     }
@@ -161,7 +183,8 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
                 CNContactEmailAddressesKey,
                 CNContactPhoneNumbersKey,
                 CNContactImageDataAvailableKey,
-                CNContactThumbnailImageDataKey
+                CNContactThumbnailImageDataKey,
+                CNContactImageDataKey
             ] as [Any]
         
         let fetchRequest = CNContactFetchRequest(keysToFetch: keysToFetch as! [CNKeyDescriptor])
@@ -179,6 +202,5 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         return contacts
     }
-    
     
 }
