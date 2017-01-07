@@ -12,6 +12,10 @@ class MyDrinksVC: UIViewController, MyDrinksModalTransitionListener {
     
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
+    @IBOutlet weak var containerReceivedDrinks: UIView!
+    
+    @IBOutlet weak var containerPurchasedDrinks: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -27,6 +31,22 @@ class MyDrinksVC: UIViewController, MyDrinksModalTransitionListener {
     @IBAction func toSlideInMenu(_ sender: Any) {
         performSegue(withIdentifier: "toSlideInMenuFromMyDrinks", sender: self)
     }
+    
+    @IBAction func showComponent(_ sender: UISegmentedControl) {
+        
+        if sender.selectedSegmentIndex == 0 {
+            
+            self.containerReceivedDrinks.alpha = 1
+            self.containerPurchasedDrinks.alpha = 0
+            
+        } else {
+            
+            self.containerReceivedDrinks.alpha = 0
+            self.containerPurchasedDrinks.alpha = 1
+        }
+        
+    }
+    
     
     func popoverDismissed(selectedSlideInMenuOption: String) {
         

@@ -359,13 +359,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Drinks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd8-Hc-eFU">
-                                <rect key="frame" x="133" y="303" width="109" height="61"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dga-ho-Vyl">
+                                <rect key="frame" x="71" y="72" width="232" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <segments>
+                                    <segment title="Received"/>
+                                    <segment title="Purchased"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="HJy-SG-7O0" eventType="valueChanged" id="9BR-uZ-qlB"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5Z-v3-68f">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="7pL-9v-VSj" kind="embed" id="8Uz-PA-qqU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Jm-Me-ZgN">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.4598518908" green="0.98361098769999999" blue="0.29778555039999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="47S-EA-hSL" kind="embed" id="4g6-VF-OWR"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -377,6 +396,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="containerPurchasedDrinks" destination="4Jm-Me-ZgN" id="CPH-G8-HuU"/>
+                        <outlet property="containerReceivedDrinks" destination="n5Z-v3-68f" id="Wot-BP-zC0"/>
                         <segue destination="eE7-Rw-P75" kind="show" identifier="myDrinksToAbout" id="88A-M8-i3X"/>
                         <segue destination="QGN-nf-PVc" kind="presentation" identifier="toSlideInMenuFromMyDrinks" id="LTG-Yj-Zyj"/>
                         <segue destination="LQo-DK-FAP" kind="show" identifier="myDrinksToProfile" id="mOL-8h-pMZ"/>
@@ -386,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrU-eA-SHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="-256"/>
+            <point key="canvasLocation" x="521" y="-260"/>
         </scene>
         <!--BuyDrinks-->
         <scene sceneID="Lg4-zs-SYm">
@@ -427,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDP-UD-Pau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-876"/>
+            <point key="canvasLocation" x="572" y="-969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5W4-cA-bnD">
@@ -901,6 +922,48 @@
             </objects>
             <point key="canvasLocation" x="3586" y="-2250"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="QdP-jj-Stb">
+            <objects>
+                <viewController id="7pL-9v-VSj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="17b-WZ-8S6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oEj-gz-gT5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MV-CZ-cgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053.5999999999999" y="-686.35682158920542"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Q4C-Kf-tdR">
+            <objects>
+                <viewController id="47S-EA-hSL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cio-zI-YHv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d70-49-a4u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vz9-H0-C97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="-144.82758620689657"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Contacts" width="50" height="50"/>
@@ -914,10 +977,10 @@
         <image name="default-profile-picture" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="s6A-BU-fhO"/>
-        <segue reference="oyH-vL-poI"/>
-        <segue reference="pwb-Fw-XiU"/>
-        <segue reference="HzG-pS-qn6"/>
-        <segue reference="C7r-1C-GmE"/>
+        <segue reference="5r9-Wr-NCT"/>
+        <segue reference="mOL-8h-pMZ"/>
+        <segue reference="anl-uw-QNd"/>
+        <segue reference="88A-M8-i3X"/>
+        <segue reference="LTG-Yj-Zyj"/>
     </inferredMetricsTieBreakers>
 </document>

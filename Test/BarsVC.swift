@@ -175,7 +175,8 @@ class BarsVC: UIViewController, BarsModalTransitionListener, UISearchBarDelegate
 
 extension BarsVC: Bars_ConfigureBarsGeoQueryVCDelegate {
     func updateDataForGeoQuery(data: String) {
+    
         // FIRE GEOQUERY
-        
+    
     }
 }
