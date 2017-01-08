@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol People_ConfigureGeoQueryVCDelegate {
+protocol People_ConfigureGeoQueryVCDelegate: class {
     func updateDataForGeoQuery(data: String)
 }
 
@@ -19,7 +19,7 @@ class People_ConfigureGeoQueryVC: UIViewController, UIPickerViewDelegate, UIPick
     var pickerData: [String] = [String]()
     var selectedRadius: String = ""
     
-    var delegate: People_ConfigureGeoQueryVCDelegate?
+    weak var delegate: People_ConfigureGeoQueryVCDelegate?
     
     
     override func viewDidLoad() {

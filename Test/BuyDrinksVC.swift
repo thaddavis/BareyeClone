@@ -13,6 +13,8 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
     
     @IBOutlet weak var configureRecipientControl: UIControl!
     
+    @IBOutlet weak var recipientLabel: UILabel!
+    
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
     override func viewDidLoad() {
@@ -65,6 +67,18 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
         
         
         performSegue(withIdentifier: "buyDrinksConfigureRecipient", sender: self)
+        
+    }
+    
+    @IBAction func unwindToBuyDrinksHome(segue: UIStoryboardSegue) {
+        
+        if let sourceViewController = segue.source as? BuyDrinks_People_ContactsVC {
+            let dataRecieved = sourceViewController.selectedRecipient
+        
+            recipientLabel.text = dataRecieved
+            
+            print(dataRecieved)
+        }
         
     }
     

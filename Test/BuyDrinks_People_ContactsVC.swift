@@ -19,6 +19,9 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
     var filteredContacts = [CNContact]()
     var inSearchMode = false
     
+    // Need proper model
+    var selectedRecipient = ""
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -40,7 +43,6 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
             DispatchQueue.main.async() {
                 
                 self.contactsCollectionView.reloadData()
-                
             }
             
         }
@@ -73,6 +75,15 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
     
     //----------********** UICollectionViewDelegate CODE
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if !inSearchMode {
+            self.selectedRecipient = self.contacts[indexPath.row].givenName + " " + self.contacts[indexPath.row].middleName + " " + contacts[indexPath.row].familyName
+        } else {
+            self.selectedRecipient = self.filteredContacts[indexPath.row].givenName + " " + self.filteredContacts[indexPath.row].middleName + " " + filteredContacts[indexPath.row].familyName
+        }
+        
+        self.performSegue(withIdentifier: "unwindToBuyDrinksHome", sender: self)
+        
         
     }
     

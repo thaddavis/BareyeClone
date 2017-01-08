@@ -598,6 +598,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="configureRecipientControl" destination="jd7-1M-5ez" id="Fq5-kI-XIR"/>
+                        <outlet property="recipientLabel" destination="sZf-0x-TgH" id="a9z-t7-rgd"/>
                         <segue destination="eE7-Rw-P75" kind="show" identifier="buyDrinksToAbout" id="jhp-Bh-1pL"/>
                         <segue destination="QGN-nf-PVc" kind="presentation" identifier="toSlideInMenuFromBuyDrinks" id="ALz-ne-Ce3"/>
                         <segue destination="LQo-DK-FAP" kind="show" identifier="buyDrinksToProfile" id="CWU-r7-SAU"/>
@@ -1273,9 +1274,11 @@
                     <connections>
                         <outlet property="contactsCollectionView" destination="0ul-6m-O4R" id="FLS-QK-g9q"/>
                         <outlet property="searchBarForContacts" destination="Tg4-z7-Z8p" id="qJu-Q4-OBw"/>
+                        <segue destination="MC1-zc-Yad" kind="unwind" identifier="unwindToBuyDrinksHome" unwindAction="unwindToBuyDrinksHomeWithSegue:" id="MNY-HJ-ovi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nen-BI-Z80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MC1-zc-Yad" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2953" y="-1184"/>
         </scene>
