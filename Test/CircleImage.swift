@@ -1,14 +1,14 @@
 //
-//  RoundedImage.swift
+//  CircleImage.swift
 //  Test
 //
-//  Created by Thad Duval on 1/6/17.
+//  Created by Thad Duval on 1/8/17.
 //  Copyright © 2017 Thad Duval. All rights reserved.
 //
 
 import UIKit
 
-class RoundedImage: UIImageView {
+class CircleImage: UIImageView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,14 +17,15 @@ class RoundedImage: UIImageView {
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 0.5
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        //self.image =  UIImage(named:"GenderNeutralUser.png")
+        //self.image =  UIImage(named:"")
         self.clipsToBounds = true
         self.backgroundColor = UIColor.blue
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = 8.0
+        layer.cornerRadius = self.frame.width / 2
     }
     
 }
+

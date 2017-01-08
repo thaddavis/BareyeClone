@@ -77,13 +77,20 @@ class BarsVC: UIViewController, BarsModalTransitionListener, UISearchBarDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let aBar = allBars[indexPath.row]
+        var aBar: Bar
+        
+        if !inSearchMode {
+            aBar = self.allBars[indexPath.row]
+        } else {
+            aBar = self.allBarsFiltered[indexPath.row]
+        }
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "BarTableViewCell") as? BarTableViewCell {
             
             cell.configureCell(bar: aBar)
             
             return cell
+        
         } else {
             return UITableViewCell()
         }

@@ -10,10 +10,15 @@ import UIKit
 
 class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
     
+    
+    @IBOutlet weak var configureRecipientControl: UIControl!
+    
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureRecipientControl.addTarget(self, action: #selector(handleTouchConfigureRecipientControl), for: UIControlEvents.touchUpInside)
         
         BuyDrinksModalTransitionMediator.instance.setListener(listener: self)
     }
@@ -55,6 +60,19 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
         }
     
     }
+    
+    @IBAction func handleTouchConfigureRecipientControl(_ sender: UIControl) {
+        
+        
+        performSegue(withIdentifier: "buyDrinksConfigureRecipient", sender: self)
+        
+    }
+    
+    //print("configureBar")
+        
+    //performSegue(withIdentifier: "buyDrinksConfigureBar", sender: self)
+    
+    //print("configureDrink")
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

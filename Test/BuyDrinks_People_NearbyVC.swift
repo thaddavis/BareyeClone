@@ -1,15 +1,15 @@
 //
-//  People_NearbyVC.swift
+//  BuyDrinks_People_NearbyVC.swift
 //  Test
 //
-//  Created by Thad Duval on 1/4/17.
+//  Created by Thad Duval on 1/8/17.
 //  Copyright © 2017 Thad Duval. All rights reserved.
 //
 
 import UIKit
 import Contacts
 
-class People_NearbyVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class BuyDrinks_People_NearbyVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     @IBOutlet weak var searchBarForNearbyUsers: UISearchBar!
     
@@ -42,8 +42,8 @@ class People_NearbyVC: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     @IBAction func pressedConfigureGeoQuery(_ sender: Any) {
-        
-        performSegue(withIdentifier: "toConfigureGeoQuery", sender: self)
+    
+        performSegue(withIdentifier: "toBuyDrinksConfigureGeoQuery", sender: self)
         
     }
     
@@ -122,15 +122,15 @@ class People_NearbyVC: UIViewController, UICollectionViewDelegate, UICollectionV
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toConfigureGeoQuery" {
-            (segue.destination as! People_ConfigureGeoQueryVC).delegate = self
+        if segue.identifier == "toBuyDrinksConfigureGeoQuery" {
+            (segue.destination as! BuyDrinks_People_ConfigureGeoQueryVC).delegate = self
         }
         
     }
     
 }
 
-extension People_NearbyVC: People_ConfigureGeoQueryVCDelegate {
+extension BuyDrinks_People_NearbyVC: BuyDrinks_People_ConfigureGeoQueryVCDelegate {
     func updateDataForGeoQuery(data: String) {
         // FIRE GEOQUERY
         
@@ -142,3 +142,4 @@ extension People_NearbyVC: People_ConfigureGeoQueryVCDelegate {
         
     }
 }
+

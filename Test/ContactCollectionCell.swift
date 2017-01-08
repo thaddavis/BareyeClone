@@ -29,7 +29,7 @@ class ContactCollectionCell: UICollectionViewCell {
         if ((self.CE.imageData) != nil) {
             thumbImg.image = UIImage(data: self.CE.imageData!)
         } else {
-            thumbImg.image = UIImage(named: "default-profile-picture.jpg")
+            thumbImg.image = UIImage(named: "")
         }
         
     }
