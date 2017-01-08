@@ -32,6 +32,9 @@
 		895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895EE55C1E1D957E004C84BF /* ContactVC.swift */; };
 		8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */; };
 		8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */; };
+		89AB621D1E2273C200D9E03F /* BuyDrinks_BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB621C1E2273C200D9E03F /* BuyDrinks_BarsVC.swift */; };
+		89AB621F1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB621E1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift */; };
+		89AB62231E22C57200D9E03F /* BuyDrinks_TipModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB62221E22C57200D9E03F /* BuyDrinks_TipModalVC.swift */; };
 		89CBA2E81E2088C0004BA910 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */; };
 		89CBA2EA1E209DF7004BA910 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E91E209DF7004BA910 /* RoundedImage.swift */; };
 		89CBA2EC1E209E3E004BA910 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2EB1E209E3E004BA910 /* Constants.swift */; };
@@ -93,6 +96,9 @@
 		895EE55C1E1D957E004C84BF /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_ContactsVC.swift; sourceTree = "<group>"; };
 		8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_NearbyVC.swift; sourceTree = "<group>"; };
+		89AB621C1E2273C200D9E03F /* BuyDrinks_BarsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_BarsVC.swift; sourceTree = "<group>"; };
+		89AB621E1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_Bars_ConfigureGeoQueryVC.swift; sourceTree = "<group>"; };
+		89AB62221E22C57200D9E03F /* BuyDrinks_TipModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_TipModalVC.swift; sourceTree = "<group>"; };
 		89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		89CBA2E91E209DF7004BA910 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		89CBA2EB1E209E3E004BA910 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 				892ED5971E22305B0065AA72 /* BuyDrinks_People_ContactsVC.swift */,
 				892ED5991E2230990065AA72 /* BuyDrinks_People_NearbyVC.swift */,
 				892ED59B1E2230D80065AA72 /* BuyDrinks_People_ConfigureGeoQuery.swift */,
+				89AB621C1E2273C200D9E03F /* BuyDrinks_BarsVC.swift */,
+				89AB621E1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift */,
+				89AB62221E22C57200D9E03F /* BuyDrinks_TipModalVC.swift */,
 			);
 			name = BuyDrinksVCFunctionality;
 			sourceTree = "<group>";
@@ -470,6 +479,7 @@
 				8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */,
 				89CBA2EC1E209E3E004BA910 /* Constants.swift in Sources */,
 				89D009BB1E1C1CDB007E0627 /* ChatVC.swift in Sources */,
+				89AB621F1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift in Sources */,
 				89474C001E1CB78C001F80DC /* AboutVC.swift in Sources */,
 				895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */,
 				892ED5901E2209720065AA72 /* CircleImage.swift in Sources */,
@@ -485,10 +495,12 @@
 				895EE5571E1D8EB8004C84BF /* ChatModalTransitionMediator.swift in Sources */,
 				89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */,
 				895EE5531E1D8E71004C84BF /* BuyDrinksModalTransitionMediator.swift in Sources */,
+				89AB621D1E2273C200D9E03F /* BuyDrinks_BarsVC.swift in Sources */,
 				89D009811E1B878D007E0627 /* AppDelegate.swift in Sources */,
 				892ED5981E22305B0065AA72 /* BuyDrinks_People_ContactsVC.swift in Sources */,
 				892ED58A1E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift in Sources */,
 				89474C021E1CD1B5001F80DC /* PeopleModalTransitionMediator.swift in Sources */,
+				89AB62231E22C57200D9E03F /* BuyDrinks_TipModalVC.swift in Sources */,
 				89474B841E1C498F001F80DC /* SlideInMenuItemCell.swift in Sources */,
 				89474B801E1C3EC0001F80DC /* SlideInPresentationManager.swift in Sources */,
 				89CBA2EE1E20C6EA004BA910 /* People_ConfigureGeoQuery.swift in Sources */,

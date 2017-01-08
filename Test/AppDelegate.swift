@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font]
         }
         
-        
         return true
     }
 

@@ -16,10 +16,12 @@ class RoundedImage: UIImageView {
         layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.7).cgColor
         layer.shadowOpacity = 0.8
         layer.shadowRadius = 0.5
+        
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-        //self.image =  UIImage(named:"GenderNeutralUser.png")
+        
+        self.image = UIImage(named:"")
         self.clipsToBounds = true
-        self.backgroundColor = UIColor.blue
+        self.backgroundColor = UIColor.white
     }
     
     override func layoutSubviews() {
