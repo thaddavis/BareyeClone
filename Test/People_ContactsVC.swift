@@ -19,6 +19,9 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
     var filteredContacts = [CNContact]()
     var inSearchMode = false
     
+    var selectedRecipient = ""
+    var selectedRecipientImage: Data?
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
@@ -74,9 +77,31 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
     //----------********** UICollectionViewDelegate CODE
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        // unwind to root & select For whom?
+        if !inSearchMode {
+            self.selectedRecipient = self.contacts[indexPath.row].givenName + " " + self.contacts[indexPath.row].middleName + " " + contacts[indexPath.row].familyName
+        
+            if (self.contacts[indexPath.row].imageData != nil) {
+                self.selectedRecipientImage = self.contacts[indexPath.row].imageData
+            } else {
+                self.selectedRecipientImage = nil
+            }
+        } else {
+            self.selectedRecipient = self.filteredContacts[indexPath.row].givenName + " " + self.filteredContacts[indexPath.row].middleName + " " + filteredContacts[indexPath.row].familyName
+            
+            if (self.filteredContacts[indexPath.row].imageData != nil) {
+                self.selectedRecipientImage = self.filteredContacts[indexPath.row].imageData
+            } else {
+                self.selectedRecipientImage = nil
+            }
+        }
+        
+        self.performSegue(withIdentifier: "unwindToBuyDrinksHome", sender: self)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contactCollectionCell", for: indexPath) as? ContactCollectionCell {
             
             var CE: CNContact!
@@ -177,5 +202,26 @@ class People_ContactsVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         return contacts
     }
+    
+//    func createCNContactForCurrentUser(_ firstName: String, image: UIImage?) {
+//        // create contact with mandatory values: first and last name
+//        let newContact = CNMutableContact()
+//        newContact.givenName = firstName
+//        //newContact.familyName = lastName
+//        
+//        // image
+//        if image != nil {
+//            newContact.imageData = UIImageJPEGRepresentation(image!, 0.9)
+//        }
+//        
+//        do {
+//            let newContactRequest = CNSaveRequest()
+//            newContactRequest.add(newContact, toContainerWithIdentifier: nil)
+//            try CNContactStore().execute(newContactRequest)
+//            self.presentingViewController?.dismiss(animated: true, completion: nil)
+//        } catch {
+//            self.showAlertMessage("I was unable to create the new contact. An error occurred.")
+//        }
+//    }
     
 }

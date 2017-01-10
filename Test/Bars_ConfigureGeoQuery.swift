@@ -64,6 +64,6 @@ class Bars_ConfigureGeoQueryVC: UIViewController, UIPickerViewDelegate, UIPicker
         
         dismiss(animated: true, completion: nil)
     }
-    
+
 }
 

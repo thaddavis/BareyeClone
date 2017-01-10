@@ -41,13 +41,12 @@ class BuyDrinks_TipModalVC: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     @IBAction func backToBuyDrinks(_ sender: Any) {
-        
+    
         self.delegate?.updateTipAmount(data: self.selectedPercentage)
         
         dismiss(animated: true, completion: nil)
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

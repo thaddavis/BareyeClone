@@ -58,12 +58,12 @@ class BuyDrinks_People_ConfigureGeoQueryVC: UIViewController, UIPickerViewDelega
         selectedRadius = pickerData[pickerView.selectedRow(inComponent: 0)]
     }
     
-    @IBAction func backToBuyDrinks_PeopleVC(_ sender: Any) {
-    
+    @IBAction func backToPeopleVC(_ sender: Any) {
+        
         self.delegate?.updateDataForGeoQuery(data: self.selectedRadius)
         
         dismiss(animated: true, completion: nil)
-    
+        
     }
     
 }

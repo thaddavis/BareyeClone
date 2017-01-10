@@ -20,6 +20,8 @@ class BarsVC: UIViewController, BarsModalTransitionListener, UISearchBarDelegate
     
     @IBOutlet weak var barsTableView: UITableView!
     
+    var selectedBar = ""
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -95,6 +97,18 @@ class BarsVC: UIViewController, BarsModalTransitionListener, UISearchBarDelegate
             return UITableViewCell()
         }
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !inSearchMode {
+            self.selectedBar = self.allBars[indexPath.row].name
+        } else {
+            self.selectedBar = self.allBarsFiltered[indexPath.row].name
+        }
+        
+        self.performSegue(withIdentifier: "unwindToBuyDrinksHome", sender: self)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -60,11 +60,13 @@ class People_ConfigureGeoQueryVC: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func backToPeopleVC(_ sender: Any) {
+        
         self.delegate?.updateDataForGeoQuery(data: self.selectedRadius)
         
         dismiss(animated: true, completion: nil)
+        
     }
-
+    
 }
 
 

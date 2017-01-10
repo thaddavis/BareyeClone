@@ -15,12 +15,15 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
     
     @IBOutlet weak var contactsCollectionView: UICollectionView!
     
+    @IBOutlet weak var buyYourselfADrinkControl: UIControl!
+    
     var contacts = [CNContact]()
     var filteredContacts = [CNContact]()
     var inSearchMode = false
     
     // Need proper model
     var selectedRecipient = ""
+    var selectedRecipientImage: Data?
     
     var screenSize: CGRect!
     var screenWidth: CGFloat!
@@ -41,11 +44,12 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
             self.contacts = self.findContacts()
             
             DispatchQueue.main.async() {
-                
                 self.contactsCollectionView.reloadData()
             }
             
         }
+        
+        buyYourselfADrinkControl.addTarget(self, action: #selector(buyYourselfADrink), for: UIControlEvents.touchUpInside)
         
         screenSize = UIScreen.main.bounds
         screenWidth = screenSize.width
@@ -78,8 +82,23 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
         
         if !inSearchMode {
             self.selectedRecipient = self.contacts[indexPath.row].givenName + " " + self.contacts[indexPath.row].middleName + " " + contacts[indexPath.row].familyName
+            
+            if (self.contacts[indexPath.row].imageData != nil) {
+                self.selectedRecipientImage = self.contacts[indexPath.row].imageData
+            } else {
+                self.selectedRecipientImage = nil
+            }
+            
         } else {
             self.selectedRecipient = self.filteredContacts[indexPath.row].givenName + " " + self.filteredContacts[indexPath.row].middleName + " " + filteredContacts[indexPath.row].familyName
+            
+            if (self.filteredContacts[indexPath.row].imageData != nil) {
+                self.selectedRecipientImage = self.filteredContacts[indexPath.row].imageData
+            } else {
+                self.selectedRecipientImage = nil
+            }
+
+            
         }
         
         self.performSegue(withIdentifier: "unwindToBuyDrinksHome", sender: self)
@@ -88,6 +107,7 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "contactCollectionCell", for: indexPath) as? ContactCollectionCell {
             
             var CE: CNContact!
@@ -109,6 +129,7 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
         } else {
             return UICollectionViewCell()
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -157,6 +178,14 @@ class BuyDrinks_People_ContactsVC: UIViewController, UICollectionViewDelegate, U
             contactsCollectionView.reloadData()
         }
     }
+    
+    
+    
+    
+    @IBAction func buyYourselfADrink(_ sender: UIControl) {
+        self.performSegue(withIdentifier: "unwindToBuyYourselfADrinkHome", sender: self)
+    }
+    
     
     //----------********** Find Contacts from CNContactStore
     func findContacts() -> [CNContact] {

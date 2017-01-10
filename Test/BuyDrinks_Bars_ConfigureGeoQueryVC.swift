@@ -60,9 +60,13 @@ class BuyDrinks_Bars_ConfigureGeoQueryVC: UIViewController, UIPickerViewDelegate
     }
     
     @IBAction func backToBarsVC(_ sender: Any) {
+        
         self.delegate?.updateDataForGeoQuery(data: self.selectedRadius)
         
         dismiss(animated: true, completion: nil)
+        
     }
+    
+    
     
 }

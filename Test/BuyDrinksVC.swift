@@ -19,16 +19,24 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
     
     @IBOutlet weak var recipientLabel: UILabel!
     
+    @IBOutlet weak var recipientImage: CircleImage!
+    
     @IBOutlet weak var selectedBarLabel: UILabel!
     
     @IBOutlet weak var tipPercentageLabel: UILabel!
+    
+    var selectedRecipientFromPeopleTab = ""
+    var selectedBarFromBarsTab = ""
+    var selectedRecipientFromPeopleImage:UIImage? = nil
     
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            tipPercentageLabel.text = "15%"
+        tipPercentageLabel.text = "15%"
+        recipientLabel.text = "You"
+        
         configureRecipientControl.addTarget(self, action: #selector(handleTouchConfigureRecipientControl), for: UIControlEvents.touchUpInside)
         
         tipPercentageControl.addTarget(self, action: #selector(handleTouchTipPercentageControl), for: UIControlEvents.touchUpInside)
@@ -36,6 +44,24 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
         configureBarControl.addTarget(self, action: #selector(handleTouchConfigureBarControl), for: UIControlEvents.touchUpInside)
         
         BuyDrinksModalTransitionMediator.instance.setListener(listener: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if (self.selectedRecipientFromPeopleTab != "") {
+            self.recipientLabel.text = selectedRecipientFromPeopleTab
+        }
+        
+        if (self.selectedBarFromBarsTab != "") {
+            self.selectedBarLabel.text = selectedBarFromBarsTab
+        }
+        
+        if (self.selectedRecipientFromPeopleImage != nil) {
+            recipientImage.image = selectedRecipientFromPeopleImage
+        } else {
+            recipientImage.image = UIImage(named: "default-profile-picture")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,14 +122,47 @@ class BuyDrinksVC: UIViewController, BuyDrinksModalTransitionListener {
         if let sourceViewController = segue.source as? BuyDrinks_People_ContactsVC {
             let dataRecieved = sourceViewController.selectedRecipient
         
-            recipientLabel.text = dataRecieved
+            if let imageReceived = sourceViewController.selectedRecipientImage {
+                recipientImage.image = UIImage(data: imageReceived)
+            } else {
+                recipientImage.image = UIImage(named: "default-profile-picture")
+            }
             
-        } else if let sourceViewController = segue.source as? BuyDrinks_BarsVC {
+            recipientLabel.text = dataRecieved
+            self.selectedRecipientFromPeopleTab = ""
+        }
+        else if let sourceViewController = segue.source as? BuyDrinks_BarsVC {
             let dataRecieved = sourceViewController.selectedBar
             
             selectedBarLabel.text = dataRecieved
-            
+            self.selectedBarFromBarsTab = ""
         }
+        else if let sourceViewController = segue.source as? People_ContactsVC {
+            
+            self.selectedRecipientFromPeopleTab = sourceViewController.selectedRecipient
+            
+            if let imageReceived = sourceViewController.selectedRecipientImage {
+                self.selectedRecipientFromPeopleImage = UIImage(data: imageReceived)
+            } else {
+                self.selectedRecipientFromPeopleImage = nil
+            }
+            
+            self.tabBarController?.selectedIndex = 2
+        
+        }
+        else if let sourceViewController = segue.source as? BarsVC {
+            
+            self.selectedBarFromBarsTab = sourceViewController.selectedBar
+            
+            self.tabBarController?.selectedIndex = 2
+        }
+    }
+    
+    @IBAction func unwindToBuyYourselfADrinkHome(segue: UIStoryboardSegue) {
+        
+        self.selectedRecipientFromPeopleTab = ""
+        recipientLabel.text = "You"
+        recipientImage.image = UIImage(named: "default-profile-picture")
         
     }
     

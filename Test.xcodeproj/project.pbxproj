@@ -32,9 +32,12 @@
 		895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895EE55C1E1D957E004C84BF /* ContactVC.swift */; };
 		8976DACB1E1DED5F00C8279D /* People_ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */; };
 		8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */; };
+		898F40EB1E24DDF3004774F6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F40EA1E24DDF3004774F6 /* RoundedButton.swift */; };
+		898F40ED1E251ABD004774F6 /* YouContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898F40EC1E251ABD004774F6 /* YouContactCollectionCell.swift */; };
 		89AB621D1E2273C200D9E03F /* BuyDrinks_BarsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB621C1E2273C200D9E03F /* BuyDrinks_BarsVC.swift */; };
 		89AB621F1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB621E1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift */; };
 		89AB62231E22C57200D9E03F /* BuyDrinks_TipModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB62221E22C57200D9E03F /* BuyDrinks_TipModalVC.swift */; };
+		89AB62251E22E5B800D9E03F /* Bars_MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB62241E22E5B800D9E03F /* Bars_MapVC.swift */; };
 		89CBA2E81E2088C0004BA910 /* ContactCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */; };
 		89CBA2EA1E209DF7004BA910 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2E91E209DF7004BA910 /* RoundedImage.swift */; };
 		89CBA2EC1E209E3E004BA910 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CBA2EB1E209E3E004BA910 /* Constants.swift */; };
@@ -96,9 +99,12 @@
 		895EE55C1E1D957E004C84BF /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		8976DACA1E1DED5F00C8279D /* People_ContactsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_ContactsVC.swift; sourceTree = "<group>"; };
 		8976DACC1E1DED7500C8279D /* People_NearbyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People_NearbyVC.swift; sourceTree = "<group>"; };
+		898F40EA1E24DDF3004774F6 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		898F40EC1E251ABD004774F6 /* YouContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouContactCollectionCell.swift; sourceTree = "<group>"; };
 		89AB621C1E2273C200D9E03F /* BuyDrinks_BarsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_BarsVC.swift; sourceTree = "<group>"; };
 		89AB621E1E2273E100D9E03F /* BuyDrinks_Bars_ConfigureGeoQueryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_Bars_ConfigureGeoQueryVC.swift; sourceTree = "<group>"; };
 		89AB62221E22C57200D9E03F /* BuyDrinks_TipModalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDrinks_TipModalVC.swift; sourceTree = "<group>"; };
+		89AB62241E22E5B800D9E03F /* Bars_MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bars_MapVC.swift; sourceTree = "<group>"; };
 		89CBA2E71E2088C0004BA910 /* ContactCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCollectionCell.swift; sourceTree = "<group>"; };
 		89CBA2E91E209DF7004BA910 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		89CBA2EB1E209E3E004BA910 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				892ED5891E20FCEB0065AA72 /* Bars_ConfigureGeoQuery.swift */,
+				89AB62241E22E5B800D9E03F /* Bars_MapVC.swift */,
 			);
 			name = BarsVCFunctionality;
 			sourceTree = "<group>";
@@ -290,6 +297,8 @@
 				892ED58D1E2175FA0065AA72 /* BarTableViewCell.swift */,
 				892ED58F1E2209720065AA72 /* CircleImage.swift */,
 				892ED5911E2212C00065AA72 /* BorderedView.swift */,
+				898F40EA1E24DDF3004774F6 /* RoundedButton.swift */,
+				898F40EC1E251ABD004774F6 /* YouContactCollectionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -471,6 +480,7 @@
 				89D009BD1E1C2BD8007E0627 /* TabBar.swift in Sources */,
 				89474B7C1E1C3E71001F80DC /* SlideInPresentationAnimator.swift in Sources */,
 				89CBA2EA1E209DF7004BA910 /* RoundedImage.swift in Sources */,
+				898F40ED1E251ABD004774F6 /* YouContactCollectionCell.swift in Sources */,
 				89D009B81E1C1CB6007E0627 /* MyDrinksVC.swift in Sources */,
 				892ED58E1E2175FA0065AA72 /* BarTableViewCell.swift in Sources */,
 				8976DACD1E1DED7500C8279D /* People_NearbyVC.swift in Sources */,
@@ -484,6 +494,7 @@
 				895EE55D1E1D957E004C84BF /* ContactVC.swift in Sources */,
 				892ED5901E2209720065AA72 /* CircleImage.swift in Sources */,
 				892ED5961E222BE80065AA72 /* BuyDrinks_PeopleVC.swift in Sources */,
+				89AB62251E22E5B800D9E03F /* Bars_MapVC.swift in Sources */,
 				892ED59A1E2230990065AA72 /* BuyDrinks_People_NearbyVC.swift in Sources */,
 				89D009851E1B878D007E0627 /* BarsVC.swift in Sources */,
 				892ED5921E2212C00065AA72 /* BorderedView.swift in Sources */,
@@ -491,6 +502,7 @@
 				89474B821E1C439A001F80DC /* SlideInMenuVC.swift in Sources */,
 				895EE55B1E1D9571004C84BF /* SettingsVC.swift in Sources */,
 				895EE5501E1D7D71004C84BF /* BarsModalTransitionMediator.swift in Sources */,
+				898F40EB1E24DDF3004774F6 /* RoundedButton.swift in Sources */,
 				89CBA2E81E2088C0004BA910 /* ContactCollectionCell.swift in Sources */,
 				895EE5571E1D8EB8004C84BF /* ChatModalTransitionMediator.swift in Sources */,
 				89D009B61E1C1C3D007E0627 /* BuyDrinksVC.swift in Sources */,
