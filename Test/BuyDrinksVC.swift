@@ -191,7 +191,7 @@ extension BuyDrinksVC: BuyDrinks_ConfigureTipVCDelegate {
             tipPercentageLabel.text = data
         } else {
             
-            tipPercentageLabel.text = "5%"
+            tipPercentageLabel.text = "15%"
         }
         
     }

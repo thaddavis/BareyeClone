@@ -102,7 +102,7 @@
         <scene sceneID="WyX-7O-pnU">
             <objects>
                 <navigationController storyboardIdentifier="peopleNavigationController" id="Whc-dx-yC1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Contacts" selectedImage="Contacts" id="jx3-ht-3n5"/>
+                    <tabBarItem key="tabBarItem" title="" image="contacts4040final" selectedImage="contacts4040final" id="jx3-ht-3n5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="10X-Qn-wtC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -638,7 +638,7 @@
         <scene sceneID="5W4-cA-bnD">
             <objects>
                 <navigationController storyboardIdentifier="myDrinksNavigationController" id="EUi-ma-gdd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Wine Glass" selectedImage="Wine Glass" id="Zhr-rM-S9M"/>
+                    <tabBarItem key="tabBarItem" title="" image="wine-glass4040final" selectedImage="wine-glass4040final" id="Zhr-rM-S9M"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQC-mb-IGD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -655,7 +655,7 @@
         <scene sceneID="Nt7-nT-q2q">
             <objects>
                 <navigationController storyboardIdentifier="chatNavigationController" id="RGE-h3-Zbo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Speech Bubble" selectedImage="Speech Bubble" id="61U-ZW-eYj"/>
+                    <tabBarItem key="tabBarItem" title="" image="speech-bubble4040final" selectedImage="speech-bubble4040final" id="61U-ZW-eYj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJP-nv-0iO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -713,7 +713,7 @@
         <scene sceneID="aRw-Zd-pTe">
             <objects>
                 <navigationController storyboardIdentifier="buyDrinksNavigationController" id="Bma-ja-GJu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Money" selectedImage="Money" id="aVg-IC-6vG"/>
+                    <tabBarItem key="tabBarItem" title="" image="money4040final" selectedImage="money4040final" id="aVg-IC-6vG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rp1-F2-SQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -845,7 +845,7 @@
         <scene sceneID="Tgy-C0-hWd">
             <objects>
                 <navigationController storyboardIdentifier="barsNavigationController" id="Gc1-MS-XUJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Marker" selectedImage="Marker" id="X5N-sB-bK0"/>
+                    <tabBarItem key="tabBarItem" title="" image="marker4040final" selectedImage="marker4040final" id="X5N-sB-bK0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qkm-qP-UUH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1767,14 +1767,15 @@
         <image name="Back" width="50" height="50"/>
         <image name="Contacts" width="50" height="50"/>
         <image name="Forward" width="50" height="50"/>
-        <image name="Marker" width="50" height="50"/>
         <image name="Menu" width="50" height="50"/>
-        <image name="Money" width="50" height="50"/>
         <image name="NearMe" width="50" height="50"/>
         <image name="SortingOptions" width="50" height="50"/>
-        <image name="Speech Bubble" width="50" height="50"/>
-        <image name="Wine Glass" width="50" height="50"/>
+        <image name="contacts4040final" width="40" height="40"/>
         <image name="default-profile-picture" width="1000" height="1000"/>
+        <image name="marker4040final" width="40" height="40"/>
+        <image name="money4040final" width="40" height="40"/>
+        <image name="speech-bubble4040final" width="40" height="40"/>
+        <image name="wine-glass4040final" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jhp-Bh-1pL"/>
